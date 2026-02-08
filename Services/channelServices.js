@@ -1,5 +1,4 @@
-const axios = require("axios");
-const Channel = require("./../models/channel");
+const Channel = require('../models/channelModel')
 const api = require('../Services/soccersApi');
 
 

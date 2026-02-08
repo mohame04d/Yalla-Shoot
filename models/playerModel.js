@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 
 const PlayerSchema = new mongoose.Schema({
-   apiId: {
-      type: Number,
-      required: [true, "apiId is required"],
-      unique: true,
-      index: true,
-    },
+  apiId: {
+    type: Number,
+    required: [true, "apiId is required"],
+    unique: true,
+    index: true,
+  },
   name: {
     type: String,
     required: [true, "name is required"],
@@ -41,3 +41,4 @@ const PlayerSchema = new mongoose.Schema({
 });
 
 const Player = mongoose.model("Player", PlayerSchema);
+module.exports = Player;

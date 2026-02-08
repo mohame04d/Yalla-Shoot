@@ -2,7 +2,7 @@ const api = require("./soccersApi");
 const Player = require("../models/playerModel");
 const Team = require("./../models/teamModel");
 
-module.exports=async function syncPlayers() {
+async function syncPlayers() {
   try {
     const res = await api.get("players/");
     const players = res.data.data || [];
@@ -46,4 +46,4 @@ module.exports=async function syncPlayers() {
     console.error("syncAllPlayers error:", err.message);
   }
 }
-syncPlayers();
+module.exports = syncPlayers();

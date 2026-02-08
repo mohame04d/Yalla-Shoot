@@ -45,7 +45,7 @@ async function syncStadiums() {
 
     await Stadium.bulkWrite(ops);
   } catch (err) {
-    console.error("syncAllStadiums error:", err.message);
+    console.error("syncAllStadiums error:", err);
   }
 }
 syncStadiums();  

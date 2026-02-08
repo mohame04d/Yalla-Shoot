@@ -1,11 +1,11 @@
 const catchAsync = require("./../utils/catchAsync");
-const appError = require("./../utils/appError");
+const appError = require("./../utils/appError");  
 const Player = require("./../models/playerModel");
 const mongoose = require("mongoose");
 
 exports.createPlayer = catchAsync(async (req, res, next) => {
   const player = await Player.findOne({ name: req.body.name });
-  if (player) return next(new appError("player already", 400));
+  if (player) return next(new appError("player already exist", 400));
   const newPlayer = await Player.create(req.body);
   res.status(201).json({
     status: "success",

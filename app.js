@@ -32,6 +32,7 @@ const refereeRoute = require("./Routes/refereeRoute");
 const standingRoute = require("./Routes/standingRoute");
 const topScoresRoute = require("./Routes/topScoresRoute");
 const detailsRoute = require("./Routes/detailsRoute");
+const searchRoute = require("./Routes/searchRoute");
 const errorController = require("./Controller/errorController");
 
 require("./Services/soccersApi");
@@ -45,6 +46,7 @@ require("./Services/refereeServices");
 require("./Services/stadiumServices");
 require("./Services/transferAndPlayers");
 require("./Services/standingServices");
+require("./Services/teamService");
 
 app.use("/api", limiter);
 app.use(express.json({ limit: "10kb" }));
@@ -61,7 +63,8 @@ app.use("/api/channel", channelRoute);
 app.use("/api/refree", refereeRoute);
 app.use("/api/standing", standingRoute);
 app.use("/api/topScores", topScoresRoute);
-app.use("api/details", detailsRoute);
+app.use("/api/details", detailsRoute);
+app.use("/api/search", searchRoute);
 app.use((req, res, next) => {
   next(new appError(`can't find ${req.originalUrl} on the server`, 404));
 });
