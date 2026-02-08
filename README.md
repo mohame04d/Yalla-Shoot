@@ -1,10 +1,7 @@
 # Yalla Shoot - Football Live Scores Platform
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/username/yalla-shoot/main/logo.png" alt="Yalla Shoot Logo" width="150">
-</p>
 
-A live football scores platform built with **Node.js**, **NestJS**, **MongoDB**, and **Socket.io**. This project provides real-time updates for matches, players, teams, referees, and leagues.
+A live football scores platform built with **Node.js**, **MongoDB**, and **Socket.io**. This project provides real-time updates for matches, players, teams, referees, and leagues.
 
 ---
 
