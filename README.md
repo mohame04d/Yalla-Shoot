@@ -1,9 +1,8 @@
-# Yalla Shoot - Football Live Scores Platform
+Yalla Shoot - Football Live Scores Platform
 
+A live football scores platform built with Node.js, MongoDB, and Socket.io. This project provides real-time updates for matches, players, teams, referees, and leagues.
 
-A live football scores platform built with **Node.js**, **MongoDB**, and **Socket.io**. This project provides real-time updates for matches, players, teams, referees, and leagues.
-
-yalla shoot API is a fully-featured football backend system that handles everything related to football data management, including matches, players, teams, leagues, news, transfers, and real-time updates.
+Yalla Shoot API is a fully-featured football backend system that handles everything related to football data management, including matches, players, teams, leagues, news, transfers, and real-time updates.
 
 The system is built with scalability and performance in mind, following clean architecture principles and modular structure.
 
@@ -11,7 +10,7 @@ The system is built with scalability and performance in mind, following clean ar
 
 I handled and implemented the following modules:
 
-👤 Authentication & Authorization (auth)
+👤 Authentication & Authorization (auth) – with JWT for secure authentication and Bcrypt for password hashing
 
 👥 Users Management
 
@@ -63,6 +62,10 @@ Socket.io – Real-time match updates
 
 Node-Cron – Scheduled background jobs
 
+JWT (JSON Web Token) – Secure authentication
+
+Bcrypt – Password hashing
+
 🔥 Key Features
 
 ✅ Advanced filtering, sorting, pagination, and field limiting
@@ -71,7 +74,7 @@ Node-Cron – Scheduled background jobs
 
 ✅ Scheduled tasks with Node-Cron
 
-✅ Full authentication system
+✅ Full authentication system with JWT & Bcrypt
 
 ✅ Search functionality across multiple modules
 
@@ -109,7 +112,7 @@ Advanced query features (Filter, Sort, Pagination, Search)
 
 Data validation using Joi
 
-Secure routes with authentication middleware
+Secure routes with JWT authentication and role-based authorization
 
 📂 Architecture
 
